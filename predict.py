@@ -28,13 +28,13 @@ def get_models():
 
 
 def get_processed_df(DF_PATH, bert_model, bert_tokenizer, device):
-    df = pd.read_csv(DF_PATH).dropna()
-    # only interested in minimum years of experience
-    df['min_year_of_experience'] = df['year_of_experience'].apply(lambda x: int(x.split('-')[0]) if '-' in x else int(x.replace('+', '')))
-    # add combine_description column for training specialization classifier
-    df["combined_description"] = df['job_title'] + " " + df['job_description'] + " " + df['skillsets']
-    # combine IT and Software Developer into IT & Software Developer column
-    df["specialization"] = df["specialization"].apply(lambda x: "IT & Software Developer" if x in ["IT", "Software Developer"] else x)
+    df = pd.read_csv(DF_PATH)
+    # # only interested in minimum years of experience
+    # df['min_year_of_experience'] = df['year_of_experience'].apply(lambda x: int(x.split('-')[0]) if '-' in x else int(x.replace('+', '')))
+    # # add combine_description column for training specialization classifier
+    # df["combined_description"] = df['job_title'] + " " + df['job_description'] + " " + df['skillsets']
+    # # combine IT and Software Developer into IT & Software Developer column
+    # df["specialization"] = df["specialization"].apply(lambda x: "IT & Software Developer" if x in ["IT", "Software Developer"] else x)
     # append bert-embedded description
     df["embedded_combined_description"] = df['combined_description'].apply(lambda x: get_bert_embeddings(bert_model,bert_tokenizer,x,device))
     return df

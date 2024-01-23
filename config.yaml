@@ -2,7 +2,7 @@ predict:
   # paths
   bert_model_path: models/bert-base-uncased
   spec_cls_path: models/spec_cls.pkl
-  df_path: mini-job-rec-dataset - jobs_data.csv
+  df_path: data/mini-job-rec-dataset - jobs_data_clean.csv
 
   # predict parameters
   diff_threshold: 0.15

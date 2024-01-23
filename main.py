@@ -8,7 +8,6 @@ with open("config.yaml", "r") as f:
 
 PORT = config["streamlit"]["port"]
 
-
 def start_fastapi():
     fastapi_cmd = f"uvicorn app:app --reload --port {PORT}"
     subprocess.Popen(fastapi_cmd, shell=True)
@@ -20,7 +19,9 @@ def start_streamlit():
 
 if __name__ == "__main__":
     try:
-        start_fastapi()
-        start_streamlit()
+        fastapi_process = start_fastapi()
+        streamlit_process = start_streamlit()
+
     except KeyboardInterrupt:
-        os.killpg(os.getpgid(0), signal.SIGTERM)
+        fastapi_process.terminate()
+        streamlit_process.terminate()
