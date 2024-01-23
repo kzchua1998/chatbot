@@ -1,0 +1,41 @@
+job_id,job_title,specialization,job_description,skillsets,year_of_experience
+1,Junior Accountant,Accounting & Finance,"Assists in financial record-keeping, prepares invoices and budgets.","Accounting principles, Excel, attention to detail",1-2
+2,Financial Analyst,Accounting & Finance,Analyzes financial data to assist in business decision-making.,"Financial modeling, data analysis, Excel",2-4
+3,Tax Consultant,Accounting & Finance,Advises clients on tax planning and compliance.,"Tax law, analytical skills, communication",3-5
+4,Audit Manager,Accounting & Finance,"Oversees auditing processes, ensures compliance with regulations.","Auditing, critical thinking, leadership",5+
+5,Entry-Level Software Developer,Software Developer,,"Programming languages, HTML, CSS",0-2
+6,Full-Stack Developer,Software Developer,Develops front-end and back-end aspects of web applications.,"Full-stack development, database management",3-5
+7,Mobile App Developer,Software Developer,Specializes in creating applications for mobile platforms.,"Mobile development, UI/UX design, Java/Kotlin",2-4
+8,Software Architect,,Designs the overall structure of software systems.,"System design, programming, leadership",6+
+9,Receptionist,Admin,"Manages front desk, answers calls, and assists with administrative tasks.","Customer service, organizational skills",0-2
+10,Executive Assistant,Admin,"Provides comprehensive support to senior executives, manages schedules.","Time management, discretion, MS Office",
+11,Office Manager,Admin,"Oversees administrative functions, manages office staff, and coordinates operations.","Leadership, organization, multitasking",4+
+12,HR Administrator,Admin,"Supports HR tasks such as recruitment, employee relations, and record-keeping.","HR policies, communication, organization",2-4
+13,Sales Representative,Sales,"Generates leads, sells products or services, and maintains customer relations.","Sales techniques, communication, CRM software",1-3
+14,Account Manager,Sales,"Manages client accounts, identifies customer needs, and upsells services.","Relationship management, negotiation",3-5
+15,Business Development Manager,Sales,"Identifies business opportunities, builds client relationships, and develops strategies.","Market research, strategic planning",4+
+16,Sales Director,Sales,"Leads the sales department, sets targets, and strategizes for market growth.","Leadership, market analysis, strategic thinking",6+
+17,IT Support Specialist,IT,"Provides technical support, resolves IT issues, and maintains hardware/software.","Technical support, problem-solving",1-3
+18,Network Administrator,IT,Manages and supports the organization's network infrastructure.,"Network management, security protocols",2-4
+19,Cybersecurity Analyst,IT,"Protects systems from cyber threats, monitors networks, and responds to incidents.","Cybersecurity, threat analysis, attention to detail",3-5
+20,Data Scientist,IT,"Analyzes complex data sets to identify patterns and trends, advises on data-driven decisions.","Data analysis, machine learning, Python/R",4+
+21,Payroll Specialist,Accounting & Finance,"Manages payroll processing, ensures accuracy and compliance with regulations.",,2-3
+22,Credit Analyst,Accounting & Finance,"Assesses credit risk, evaluates financial statements and investment opportunities.","Financial analysis, risk assessment",3-4
+23,Investment Banker,Accounting & Finance,"Advises on and manages large financial transactions, such as mergers and acquisitions.","Financial modelling, negotiation, valuation",5+
+24,Risk Manager,Accounting & Finance,Identifies financial risks and develops strategies to minimize impact.,"Risk management, analytical skills",4+
+25,QA Tester,Software Developer,"Tests software applications for bugs, issues, and user experience problems.","Testing, attention to detail, problem-solving",1-2
+26,Backend Developer,Software Developer,"Focuses on server-side logic, integration, and database management.","Node JS, Python, programming language",3-5
+27,Frontend Developer,Software Developer,Develops the user interface and front-end logic of web applications.,"Web technologies, UI/UX design, JavaScript",2-4
+28,DevOps Engineer,Software Developer,Streamlines software development and deployment processes.,"Automation tools, cloud platforms",4+
+29,Administrative Assistant,Admin,Assists in daily office needs and managing general administrative activities.,"Organizational skills, multitasking, MS Office",1-3
+30,Data Entry Clerk,Admin,"Inputs and updates data into a database or documentation, maintains accurate records.","Typing speed, accuracy, basic computer skills",0-2
+31,Customer Service Rep,Sales,"Handles customer inquiries, resolves issues, and ensures customer satisfaction.","Customer service, communication, patience",1-2
+32,Sales Engineer,,Combines technical knowledge with sales skills to provide advice and support on products.,"Technical expertise, sales skills",3-5
+33,Territory Sales Manager,Sales,Manages and grows sales within a specific geographical area.,"Sales techniques, regional knowledge",4+
+34,Channel Sales Manager,Sales,"Manages sales through different channels, develops relationships with channel partners.","Channel management, strategic planning",4+
+35,Help Desk Technician,IT,"Provides technical support to users, troubleshoots issues and problems.","Customer service, IT knowledge, problem-solving",1-2
+36,System Administrator,IT,"Manages and troubleshoots an organization's software, hardware, and networks.","System management, network skills, attention to detail",2-4
+37,Cloud Solutions Architect,IT,"Designs and deploys scalable, reliable, and efficient cloud solutions.","Cloud platforms, architecture design",5+
+38,Database Administrator,IT,Maintains and secures the organization's database systems.,"Database management, SQL",3-5
+39,Compliance Officer,Accounting & Finance,Ensures financial operations and transactions comply with legal and regulatory requirements.,"Regulatory knowledge, detail-oriented",3-4
+40,Cost Accountant,Accounting & Finance,"Analyzes production costs, prepares budget reports, and assists in cost reduction initiatives.","Cost analysis, budgeting",3-4
