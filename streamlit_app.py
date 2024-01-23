@@ -17,9 +17,10 @@ st.title(APP_TITLE)
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = list()
+    # Set welcome message and instruction for chatting with chatbot
     st.session_state.messages.append({"role": "assistant", "content": WELCOME_MSG})
 
-# Display chat messages from history on app rerun
+# Display chat messages from history
 for message in st.session_state.messages:
     st.chat_message(message["role"]).markdown(message["content"])
 
@@ -31,6 +32,7 @@ if prompt := st.chat_input(CHAT_INPUT_MSG):
     st.chat_message("user").markdown(user_prompt)
     st.session_state.messages.append({"role": "user", "content": user_prompt})
 
+    # Check for prompt length to improve recommendation
     if len(prompt.split(" ")) >= 10:
 
         # Make a request to the FastAPI endpoint for predictions

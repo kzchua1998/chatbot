@@ -29,17 +29,11 @@ def get_models():
 
 def get_processed_df(DF_PATH, bert_model, bert_tokenizer, device):
     df = pd.read_csv(DF_PATH)
-    # # only interested in minimum years of experience
-    # df['min_year_of_experience'] = df['year_of_experience'].apply(lambda x: int(x.split('-')[0]) if '-' in x else int(x.replace('+', '')))
-    # # add combine_description column for training specialization classifier
-    # df["combined_description"] = df['job_title'] + " " + df['job_description'] + " " + df['skillsets']
-    # # combine IT and Software Developer into IT & Software Developer column
-    # df["specialization"] = df["specialization"].apply(lambda x: "IT & Software Developer" if x in ["IT", "Software Developer"] else x)
-    # append bert-embedded description
     df["embedded_combined_description"] = df['combined_description'].apply(lambda x: get_bert_embeddings(bert_model,bert_tokenizer,x,device))
     return df
 
 
+# To get BERT embeddings for a given text string
 def get_bert_embeddings(bert_model, bert_tokenizer, text, device):
     with torch.no_grad():
         tokenized_text = bert_tokenizer.encode(text, add_special_tokens=True, return_tensors="pt").to(device)
@@ -54,6 +48,7 @@ def get_top_n_indices(array, n):
     return top_n_indices
 
 
+# To predict specialization with proba given BERT embeddings
 def predict_spec(spec_cls_model, bert_embedding, diff_threshold):
     predictions = spec_cls_model.predict_proba([bert_embedding])[0]
     top_2_indices = get_top_n_indices(predictions, 2)
@@ -63,6 +58,7 @@ def predict_spec(spec_cls_model, bert_embedding, diff_threshold):
     return [spec_cls_model.classes_[idx] for idx in top_2_indices]
 
 
+# To predict top 3 job preference
 def predict_job(df_filtered, user_embeddings):
     similarities = cosine_similarity(user_embeddings.reshape(1, -1), np.array(df_filtered["embedded_combined_description"].to_list()))[0]
     top_3_indices = get_top_n_indices(similarities, 3)
@@ -70,6 +66,7 @@ def predict_job(df_filtered, user_embeddings):
     return recommended_jobs
 
 
+# For sanity check
 if __name__ == '__main__':
 
     bert_model, bert_tokenizer, spec_cls_model, device = get_models()

@@ -22,6 +22,7 @@ if __name__ == "__main__":
         fastapi_process = start_fastapi()
         streamlit_process = start_streamlit()
 
+    # Terminate process with Ctrl + C
     except KeyboardInterrupt:
         fastapi_process.terminate()
         streamlit_process.terminate()
