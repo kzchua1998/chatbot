@@ -1,19 +1,6 @@
 # Mini AI Chatbot
 `YOLOv8` using TensorRT accelerate for faster inference for object detection, tracking and intance segmentation.
 
-
-# Results
-
-- `object-detection`: ~88% `FPS`, ~390% `GPU-VRAM` improvement
-- `instance-segmnetation`: ~55% `FPS`, ~253% `GPU-VRAM` improvement
-
-| Models               | TensorRT Optimized               | FPS              | GPU-VRAM             |
-|-- | :-: | :-: | :-: |
-| **YOLOv8x-det + ByteTrack** | ✅ | **~32** | **~410MiB** |
-| YOLOv8x-det + ByteTrack | ❌ | ~17 | ~1600MiB |
-| **YOLOv8x-seg** | ✅ | **~28** | **~657MiB** |
-| YOLOv8x-seg | ❌ | ~18 | ~1660MiB |
-
 # Demo
 ### Vehicle Counting 
 https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tracking-and-Counting/assets/64066100/d69381b0-a4e2-48d7-a681-0eee06676639
@@ -33,9 +20,10 @@ https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tra
 2. Download the model [`bert-base-uncased`](https://drive.google.com/file/d/17cv-31VHBgKyqZDBzhaX-FL3xeqQCa2f/view?usp=sharing) and extract to models folder in the repository.
 
    ``` shell
-   - models
-      - spec_cls.pkl
-      - bert-base-uncased
+   - chatbot
+      - models
+         - spec_cls.pkl
+         - bert-base-uncased
    ```
 
 
@@ -56,45 +44,4 @@ You can expect three job recommendations printed along with their job descriptio
 ``` shell
 python main.py
 ```
-
-You will get an onnx model whose prefix is the same as input weights.
-
-
-
-## Build End2End Engine from ONNX
-
-You can export TensorRT engine from ONNX by [`build.py` ](build.py).
-
-Usage:
-
-``` shell
-python3 build.py \
---weights yolov8s.onnx \
---iou-thres 0.65 \
---conf-thres 0.25 \
---topk 100 \
---fp16  \
---device cuda:0
-```
-
-#### Description of all arguments
-
-- `--weights` : The ONNX model you download.
-- `--iou-thres` : IOU threshold for NMS plugin.
-- `--conf-thres` : Confidence threshold for NMS plugin.
-- `--topk` : Max number of detection bboxes.
-- `--fp16` : Whether to export half-precision engine.
-- `--device` : The CUDA deivce you export engine .
-
-You can modify `iou-thres` `conf-thres` `topk` by yourself.
-
-
-# Profile Your Engine
-
-Profiling your engine enables you to identify and address performance bottlenecks, improve resource utilization, and tailor your model for specific deployment scenarios, ultimately leading to better inference performance and efficiency. If you want to profile the TensorRT engine:
-
-Usage:
-
-``` shell
-python3 trt-profile.py --engine yolov8s.engine --device cuda:0
-```
+Note: The chatbot requires a minimum of `10 words` in the description to provide recommendations.
