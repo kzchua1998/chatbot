@@ -1,4 +1,20 @@
-app:
+predict:
+  # paths
+  bert_model_path: models/bert-base-uncased
+  spec_cls_path: models/spec_cls.pkl
+  df_path: mini-job-rec-dataset - jobs_data.csv
+
+  # predict parameters
+  diff_threshold: 0.15
 
 streamlit:
+  # messages 
+  app_title: Job Recommendation Chatbot
+  welcome_msg: Hello there, tell me about your job history, skills, and experience in not less than 10 words!
+  chat_input_msg: Please enter your text here.
+  warning_msg: Please tell me more about yourself in not less than 10 words for more accurate recommendations!
+
+  # fast_api
+  api_url: http://127.0.0.1:8080/predict
+  port: 8080
   
