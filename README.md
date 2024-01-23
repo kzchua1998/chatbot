@@ -42,26 +42,20 @@ https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tra
 
 # Run the Program
 
-You can export your YOLOv8 model weights from `ultralytics` with postprocess such as bbox decoder and `NMS` into ONNX model for both `detection` and `instance-segmentation` tasks.
+You can run a sanity check first to make sure all packages are installed properly before running the program
+
+#### Sanity Check
 
 ``` shell
 python predict.py
 ```
+You can expect three job recommendations printed along with their job descriptions
+
+#### Run Chatbot
 
 ``` shell
 python main.py
 ```
-
-#### Description of all arguments
-
-- `--weights` : The PyTorch model you trained.
-- `--iou-thres` : IOU threshold for NMS plugin.
-- `--conf-thres` : Confidence threshold for NMS plugin.
-- `--topk` : Max number of detection bboxes.
-- `--opset` : ONNX opset version, default is 11.
-- `--sim` : Whether to simplify your onnx model.
-- `--input-shape` : Input shape for you model, should be 4 dimensions.
-- `--device` : The CUDA deivce you export engine .
 
 You will get an onnx model whose prefix is the same as input weights.
 
