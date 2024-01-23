@@ -30,38 +30,26 @@ https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tra
    pip install -r requirements.txt
    ```
 
-2. Download the model [`bert-base-uncased`]([https://github.com/ultralytics/ultralytics](https://drive.google.com/file/d/17cv-31VHBgKyqZDBzhaX-FL3xeqQCa2f/view?usp=sharing)) and extract to models folder in the repository.
+2. Download the model [`bert-base-uncased`](https://drive.google.com/file/d/17cv-31VHBgKyqZDBzhaX-FL3xeqQCa2f/view?usp=sharing) and extract to models folder in the repository.
 
    ``` shell
-   models -- spec_cls.pkl
-          -- bert-base-uncased
+   - models
+      - spec_cls.pkl
+      - bert-base-uncased
    ```
 
 
 
-# Export End2End ONNX with NMS
+# Run the Program
 
 You can export your YOLOv8 model weights from `ultralytics` with postprocess such as bbox decoder and `NMS` into ONNX model for both `detection` and `instance-segmentation` tasks.
 
 ``` shell
-python export-det.py \
---weights yolov8s.pt \
---iou-thres 0.65 \
---conf-thres 0.25 \
---topk 100 \
---opset 11 \
---sim \
---input-shape 1 3 640 640 \
---device cuda:0
+python predict.py
 ```
 
 ``` shell
-python export-seg.py \
---weights yolov8s.pt \
---opset 11 \
---sim \
---input-shape 1 3 640 640 \
---device cuda:0
+python main.py
 ```
 
 #### Description of all arguments
