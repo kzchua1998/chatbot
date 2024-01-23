@@ -24,27 +24,19 @@ https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tra
 
 # Prepare the environment
 
-1. Install `CUDA` follow [`CUDA official website`](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#download-the-nvidia-cuda-toolkit).
-
-   🚀 RECOMMENDED `CUDA` >= 11.4
-
-2. Install `TensorRT` follow [`TensorRT official website`](https://developer.nvidia.com/nvidia-tensorrt-8x-download).
-
-   🚀 RECOMMENDED `TensorRT` >= 8.4
-
-2. Install python requirements.
+1. Install python requirements.
 
    ``` shell
    pip install -r requirements.txt
    ```
 
-3. Install [`ultralytics`](https://github.com/ultralytics/ultralytics) package for ONNX export or TensorRT API building.
+2. Install [`ultralytics`](https://github.com/ultralytics/ultralytics) package for ONNX export or TensorRT API building.
 
    ``` shell
    pip install ultralytics
    ```
 
-5. Prepare your own PyTorch weight such as `yolov8s.pt` or `yolov8s-seg.pt`.
+3. Prepare your own PyTorch weight such as `yolov8s.pt` or `yolov8s-seg.pt`.
 
 
 
