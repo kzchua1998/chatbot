@@ -2,12 +2,7 @@
 `YOLOv8` using TensorRT accelerate for faster inference for object detection, tracking and intance segmentation.
 
 # Demo
-### Vehicle Counting 
-https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tracking-and-Counting/assets/64066100/d69381b0-a4e2-48d7-a681-0eee06676639
-
-### Human Tracking and Counting 
-https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tracking-and-Counting/assets/64066100/26feac1a-f8ea-452e-982b-b7bcb09a59f8
-
+https://github.com/kzchua1998/chatbot/assets/64066100/53d9c8c7-1aa8-4684-b547-a578592c3c87
 
 # Prepare the environment
 
