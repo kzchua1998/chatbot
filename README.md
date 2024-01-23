@@ -40,3 +40,10 @@ You can expect three job recommendations printed along with their job descriptio
 python main.py
 ```
 Note: The chatbot requires a minimum of `10 words` in the description to provide recommendations.
+
+# Future Improvements
+#### Performance Optimization
+The [`bert-base-uncased`] model used for text embeddings can be further quantized and optimized using Hugging Face [`Optimum`](https://www.philschmid.de/optimizing-transformers-with-optimum) for inferene.
+
+#### Implementation of LLM
+LLM-powered chatbot can streamline customer interactions, automate responses, and enhance user engagement with generalizability, intelligent language understanding and generation capabilities.
