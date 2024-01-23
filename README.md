@@ -30,14 +30,12 @@ https://github.com/kzchua1998/TensorRT-Optimized-YOLOv8-for-Real-Time-Object-Tra
    pip install -r requirements.txt
    ```
 
-2. Install [`ultralytics`](https://github.com/ultralytics/ultralytics) package for ONNX export or TensorRT API building.
+2. Download the model [`bert-base-uncased`]([https://github.com/ultralytics/ultralytics](https://drive.google.com/file/d/17cv-31VHBgKyqZDBzhaX-FL3xeqQCa2f/view?usp=sharing)) and extract to models folder in the repository.
 
    ``` shell
-   pip install ultralytics
+   models -- spec_cls.pkl
+          -- bert-base-uncased
    ```
-
-3. Prepare your own PyTorch weight such as `yolov8s.pt` or `yolov8s-seg.pt`.
-
 
 
 
